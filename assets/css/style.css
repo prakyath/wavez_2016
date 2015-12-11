@@ -691,35 +691,20 @@ button.navbar-toggle.collapsed {
 
 /* events modal styles starts */
 
-#roboceana > .modal-dialog,
-#rcboats > .modal-dialog,
-#researchexpo > .modal-dialog,
-#idp > .modal-dialog,
-#standupcomedy > .modal-dialog,
-#freestylesolo > .modal-dialog
+.eventname > .modal-dialog
 {
   width: 80%;
   background-color: transparent;
   border-radius: 10px;
 }
 
-#roboceana > .modal-dialog > .modal-content,
-#rcboats > .modal-dialog > .modal-content,
-#researchexpo > .modal-dialog > .modal-content,
-#idp > .modal-dialog > .modal-content,
-#standupcomedy > .modal-dialog > .modal-content,
-#freestylesolo > .modal-dialog > .modal-content
+.eventname > .modal-dialog > .modal-content
 {
   background-color: transparent;
   border-radius: 10px;
 }
 
-#roboceana > .modal-dialog > .modal-content > .modal-body,
-#rcboats > .modal-dialog > .modal-content > .modal-body,
-#researchexpo > .modal-dialog > .modal-content > .modal-body,
-#idp > .modal-dialog > .modal-content > .modal-body,
-#standupcomedy > .modal-dialog > .modal-content > .modal-body,
-#freestylesolo > .modal-dialog > .modal-content > .modal-body
+.eventname > .modal-dialog > .modal-content > .modal-body
 {
   background-color: #000000;
   opacity: .8;
@@ -730,12 +715,7 @@ button.navbar-toggle.collapsed {
   border-width: 2px;
 }
 
-#roboceana > .modal-dialog > .modal-content > .modal-header, 
-#rcboats > .modal-dialog > .modal-content > .modal-header,
-#researchexpo > .modal-dialog > .modal-content > .modal-header,
-#idp > .modal-dialog > .modal-content > .modal-header,
-#standupcomedy > .modal-dialog > .modal-content > .modal-header,
-#freestylesolo > .modal-dialog > .modal-content > .modal-header
+.eventname > .modal-dialog > .modal-content > .modal-header
 {
   background-color: #000000;
   border-radius: 10px;
@@ -744,12 +724,7 @@ button.navbar-toggle.collapsed {
   border-width: 3px;
 }
 
-#roboceana > .modal-dialog > .modal-content > .modal-header > h4,
-#rcboats > .modal-dialog > .modal-content > .modal-header > h4,
-#researchexpo > .modal-dialog > .modal-content > .modal-header > h4,
-#idp > .modal-dialog > .modal-content > .modal-header > h4,
-#standupcomedy > .modal-dialog > .modal-content > .modal-header > h4,
-#freestylesolo > .modal-dialog > .modal-content > .modal-header > h4
+.eventname > .modal-dialog > .modal-content > .modal-header > h4
 {
   font-weight: 200%;
   font-size: 300%;
@@ -757,23 +732,13 @@ button.navbar-toggle.collapsed {
   text-align: center;
 }
 
-#roboceana > .modal-dialog > .modal-content > .modal-body > p,
-#rcboats > .modal-dialog > .modal-content > .modal-body > p,
-#researchexpo > .modal-dialog > .modal-content > .modal-body > p,
-#idp > .modal-dialog > .modal-content > .modal-body > p,
-#standupcomedy > .modal-dialog > .modal-content > .modal-body > p,
-#freestylesolo > .modal-dialog > .modal-content > .modal-body > p
+.eventname > .modal-dialog > .modal-content > .modal-body > p
 {
   font-size: 150%;
   text-align: center;
 }
 
-#roboceana > .modal-dialog > .modal-content > .modal-body > p > a,
-#rcboats > .modal-dialog > .modal-content > .modal-body > p > a,
-#researchexpo > .modal-dialog > .modal-content > .modal-body > p > a,
-#idp > .modal-dialog > .modal-content > .modal-body > p > a,
-#standupcomedy > .modal-dialog > .modal-content > .modal-body > p > a,
-#freestylesolo > .modal-dialog > .modal-content > .modal-body > p > a
+.eventname > .modal-dialog > .modal-content > .modal-body > p > a
 {
   background-color: transparent;
   border-style: solid;
@@ -782,12 +747,7 @@ button.navbar-toggle.collapsed {
   border-radius: 5px;
 }
 
-#roboceana > .modal-dialog > .modal-content > .modal-header > button,
-#rcboats > .modal-dialog > .modal-content > .modal-header > button,
-#researchexpo > .modal-dialog > .modal-content > .modal-header > button,
-#idp > .modal-dialog > .modal-content > .modal-header > button,
-#standupcomedy > .modal-dialog > .modal-content > .modal-header > button,
-#freestylesolo > .modal-dialog > .modal-content > .modal-header > button
+.eventname > .modal-dialog > .modal-content > .modal-header > button
 {
   color: #FFFFFF;
 }
@@ -804,6 +764,12 @@ button.navbar-toggle.collapsed {
   background-color: #000000;
   border-style: solid;
   border-color: #FFFFFF;
+}
+
+#eventsslideshow
+{
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 
