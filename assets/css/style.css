@@ -760,19 +760,6 @@ button.navbar-toggle.collapsed {
   color: #FFFFFF;
 }
 
-.popover-content
-{
-  background-color: #000000;
-  color: #FFFFFF;
-  font-size: 150%;
-}
-
-.popover
-{
-  background-color: #000000;
-  border-style: solid;
-  border-color: #FFFFFF;
-}
 
 #ep2, #ep3
 {
@@ -784,5 +771,9 @@ button.navbar-toggle.collapsed {
   margin-bottom: 0px;
 }
 
+.phidden
+{
+  display: none;
+}
 
 /* events modal styles ends */
