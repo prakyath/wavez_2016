@@ -738,13 +738,21 @@ button.navbar-toggle.collapsed {
   text-align: center;
 }
 
-.eventname > .modal-dialog > .modal-content > .modal-body > p > a
+.eventname > .modal-dialog > .modal-content > .modal-header > h4 > a
 {
   background-color: transparent;
   border-style: solid;
   border-color: #FFFFFF;
   border-width: 1px;
   border-radius: 5px;
+}
+
+.eventname > .modal-dialog > .modal-content > .modal-header > h4 > .livetab,
+.eventname > .modal-dialog > .modal-content > .modal-header > h4 > a:hover
+{
+  background-color: #FFFFFF;
+  color: #000000;
+  font-weight: 150%;
 }
 
 .eventname > .modal-dialog > .modal-content > .modal-header > button
