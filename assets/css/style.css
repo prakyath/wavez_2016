@@ -766,9 +766,13 @@ button.navbar-toggle.collapsed {
   border-color: #FFFFFF;
 }
 
-#eventsslideshow
+#ep2, #ep3
 {
   margin-top: 0px;
+}
+
+#ep2, #ep1
+{
   margin-bottom: 0px;
 }
 
