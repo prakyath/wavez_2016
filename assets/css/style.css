@@ -119,18 +119,21 @@ p.main-header:after {
   font-size: 27px;
   font-family: 'Raleway';
   font-weight: 500;
+  color:#263443;
 }
 p.sub-header {
   font-size: 27px;
   font-family: 'Raleway';
   font-weight: 100;
   margin-left: 10px;
+  color:#263443;
 }
 p.sub-header:before {
   content: " ||| ";
   font-size: 27px;
   font-family: 'Raleway';
   font-weight: 300;
+  color:#263443;
 }
 li{
   list-style: none;
@@ -633,6 +636,20 @@ h2.footer-block {
 .social a i{
   color: #fff;
 }
+.social .fa{
+  background: rgb(219, 82, 82);
+  width: 28px;
+  text-align: center;
+  padding: 7px 7px;
+  cursor: pointer;
+}
+.social .fa:hover{
+  color: rgb(219, 82, 82);
+  background:white;
+  transition: all .6s;
+}
+
+
 /*////////////////////////////////////////////////////////////////////////
 //  11 - Responsive styles
 ///////////////////////////////////////////////////////////////////////*/
