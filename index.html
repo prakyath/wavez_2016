@@ -1135,14 +1135,14 @@
 
 			<div class="content-block parallax" id="schedule">
 				<div class="container services-sec">
-					<a href="#" class="btn btn-o btn-lg pull-right">Event wise</a>
+					<a class="btn btn-o btn-lg pull-right ewiseshedon">Event wise</a>
 					<div class="title-page">
 						<p class="main-header">Schedule</p>
 					    <p class="sub-header">A little about what we do</p>
 					</div>
 					<section class="block-body">
 						<div class="row">
-							<div class="col-md-4">
+							<div class="col-md-4 dtgo">
 								<div id="sglass">
 									<p class="dtg adtg">
 										
@@ -1152,8 +1152,8 @@
 								</div>
 							</div>
 
-							<!--
-							<div class="col-md-4">
+							
+							<div class="col-md-4 ewiseshed1">
 								<div class="se">
 									<a href="#" class="btn btn-o btn-lg">Roboceana</a>
 								</div>
@@ -1173,7 +1173,7 @@
 									<a href="#" class="btn btn-o btn-lg">Freestyle Solo</a>
 								</div>
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 ewiseshed2">
 								<div class="se">
 									<a href="#" class="btn btn-o btn-lg">Treasure Hunt</a>
 								</div>
@@ -1195,8 +1195,8 @@
 							</div>
 
 
-						-->
-
+						
+							<div class="dwiseshed">
 							<div class="col-md-8">
 									<div class="scheduletabd container">
 
@@ -1322,7 +1322,7 @@
 									</div>
 							</div>
 
-
+						</div>
 						</div>
 					</section>
 				</div>
@@ -1681,6 +1681,21 @@
 
 /* ...................schedule triggers starts........................... */
 
+			
+			$(window).resize(function(){
+				if(($(window).height)<1000)
+				{
+					
+				}
+			});
+
+			if(($(window).height)<1000)
+				{
+					
+				}
+
+
+
 			var flag=1;
 			
 			$("#schedule").hover(function(){
@@ -1729,6 +1744,9 @@
 				$(".hd1").fadeIn("slow");
 				$(".schedtab").show("slow");
 				$(".schedtabb1").fadeIn("slow");
+				$("#d1 > a").addClass("disabled");
+				$("#d2 > a").removeClass("disabled");
+
 
 			});
 
@@ -1740,8 +1758,39 @@
 				$(".hd2").fadeIn("slow");
 				$(".schedtab").show("slow");
 				$(".schedtabb2").fadeIn("slow");
+				$("#d2 > a").addClass("disabled");
+				$("#d1 > a").removeClass("disabled");
 
 			});
+
+
+
+
+			var flag2=0;
+
+			$("#schedule > div > .ewiseshedon").on("click", function(){
+
+
+				if (flag2==0) {
+				$(".dwiseshed").hide();
+				$(".ewiseshed1").fadeIn();
+				$(".ewiseshed2").fadeIn();
+				$(this).text("Day Wise");
+				flag2=1;
+				}
+
+				else {
+
+				$(".dwiseshed").fadeIn();
+				$(".ewiseshed1").hide();
+				$(".ewiseshed2").hide();
+
+				$(this).text("Event Wise");
+				flag2=0;
+				};
+
+			});
+
 				
 				
 			

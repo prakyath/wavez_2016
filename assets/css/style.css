@@ -803,10 +803,6 @@ button.navbar-toggle.collapsed {
 /* schedule styles */
 
 
-
-
-
-
 #sglass 
 {
     background: rgba( 255, 255, 255, 0.50);
@@ -889,14 +885,9 @@ button.navbar-toggle.collapsed {
 }
 .scheduletabd 
 {
-  z-index: 1000;
   height: 400px;
   overflow: scroll;
   text-align: left;
-}
-.scheduletab
-{
-  z-index: 999;
 }
 
 .scheduletabd > h1
@@ -909,4 +900,8 @@ button.navbar-toggle.collapsed {
   display: none;
 }
 
+.ewiseshed1, .ewiseshed2
+{
+  display: none;
+}
 /* end of schedule styles */
