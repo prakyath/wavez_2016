@@ -777,3 +777,119 @@ button.navbar-toggle.collapsed {
 }
 
 /* events modal styles ends */
+
+
+
+
+
+
+/* schedule styles */
+
+
+
+
+
+
+#sglass 
+{
+    background: rgba( 255, 255, 255, 0.50);
+    border: 1px solid #3A4F52;
+    border-top: 1px solid #eee;  
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    width: 302px;
+    height: 450px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#swater 
+{
+    background-image: url("../images/swaves.png");   
+    background-position: top right;
+    position: absolute;
+    bottom: 0px;
+    width: 300px;
+    height: 100px;
+    -webkit-transition: all 3s ease-out;
+    -moz-transition: all 3s ease-out;
+    -o-transition: all 3s ease-out;
+    transition: all 3s ease-out;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.se
+{
+  height: 65px;
+  text-align: center;
+}
+
+.se > a
+{
+  width: 200px;
+}
+
+.dtg
+{
+  font-size: 27px;
+  font-family: "Raleway";
+  font-weight: 100;
+  margin-left: 10px;
+  text-align: center;
+}
+
+.scheduletab,.scheduletabd
+{
+  background-color: transparent;
+  color: #3A4F52;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.scheduletab > div > a
+{
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: none;
+}
+
+.scheduletab > div
+{
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.scheduletabd 
+{
+  z-index: 1000;
+  height: 400px;
+  overflow: scroll;
+  text-align: left;
+}
+.scheduletab
+{
+  z-index: 999;
+}
+
+.scheduletabd > h1
+{
+    text-align: left;
+}
+
+.schedtab,.hd1,.hd2
+{
+  display: none;
+}
+
+/* end of schedule styles */
