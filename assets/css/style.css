@@ -576,6 +576,13 @@ h2.footer-block {
     font-family: "Raleway" , sans-serif;
     margin-top: 60px;
 }
+h1.footer-block {
+    color: white;
+    font-family: "Raleway" , sans-serif;
+    
+    margin-left: 40%;
+    margin-top: 60px;
+}
 .form-control{
   border-radius: none !important;
   padding: 20px 26px;
