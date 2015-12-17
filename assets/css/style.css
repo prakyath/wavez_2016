@@ -574,6 +574,7 @@ ol.carousel-indicators {
 h2.footer-block {
     color: white;
     font-family: "Raleway" , sans-serif;
+    margin-top: 60px;
 }
 .form-control{
   border-radius: none !important;
