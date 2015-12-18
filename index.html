@@ -24,6 +24,141 @@
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 		<link rel="stylesheet" href="assets/css/animate.css">
 		<link rel="stylesheet" href="assets/css/style.css" media="screen"/>
+		<style type="text/css">
+
+		#homeframe
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		overflow: hidden;
+		background-image: url(images/wavezsky.png);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+
+	#seacontainer
+	{
+		position: absolute;
+		bottom: 0;
+		width: 250%;
+		z-index: 100;
+		overflow-y:hidden;
+	}
+
+	#sea
+	{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 110%;
+	}
+
+	#boatcontainer
+	{
+		position: absolute;
+		left: 0%;
+		bottom: -3.5%;
+		z-index: 80;
+		-ms-transform: translate(-50%,-50%); /* IE 9 */
+    	-webkit-transform: translate(-50%,-50%); /* Safari */
+    	transform: translate(-50%,-50%);
+	}
+
+	#boat
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#anchorcontainer
+	{
+		position: absolute;
+		left: 20%;
+		bottom: 30%;
+		z-index: 90;
+		-ms-transform: translate(-50%,-50%); /* IE 9 */
+    	-webkit-transform: translate(-50%,-50%); /* Safari */
+    	transform: translate(-50%,-50%);
+	}
+
+	#anchor
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#departmentlogo, #facebooklogo, #iitmlogo
+	{
+		background-color: #FFFFFF;
+		width: 100px;
+		height: 100px;
+		margin: .8em auto;
+		background-size: cover;
+		background-repeat: no-repeat;
+ 		background-position: center center;
+  		-webkit-border-radius: 99em;
+  		-moz-border-radius: 99em;
+  		border-radius: 99em;
+  		border: 3px solid #000000;
+  		box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+		-ms-transform: translate(-50%,-50%); /* IE 9 */
+    	-webkit-transform: translate(-50%,-50%); /* Safari */
+    	transform: translate(-50%,-50%);
+  		position: absolute;
+  		top: 0;
+	}
+
+	#departmentlogo
+	{
+		background-image: url("assets/images/departmentlogo.jpg");
+  		z-index: 130;
+	}
+
+	#iitmlogo
+	{
+		background-image: url("assets/images/iitmlogo.png");
+  		z-index: 120;
+	}
+
+	#facebooklogo
+	{
+		background-image: url("assets/images/facebooklogo.png");
+  		z-index: 110;
+	}
+
+	#departmentlogo:hover, #iitmlogo:hover, #facebooklogo:hover
+	{
+  		box-shadow: 0 9px 8px #FFFFFF;
+	}
+
+	#waveztextcontainer
+	{
+		-ms-transform: translate(-50%,-50%); /* IE 9 */
+    	-webkit-transform: translate(-50%,-50%); /* Safari */
+    	transform: translate(-50%,-50%);
+    	position: absolute;
+		left: 50%;
+		right: 50%;
+		bottom: 55%;
+		z-index: 140;
+	}
+
+	#waveztext
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+		</style>
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -106,13 +241,28 @@
 					</div> 
 				</section>-->
 				<section class="center">
-					<canvas id="waterfall"></canvas>
-					<div class="slogan">
-						<img src="assets/images/wavez.png" width="400" height="100">
-					</div>
-					<div class="secondary-slogan">
-						Out-educate, out-innovate, out-build
-					</div>
+					<div id="homeframe">
+		<div id="departmentlogo">
+		</div>
+		<div id="iitmlogo">
+		</div>
+		<div id="facebooklogo">
+		</div>
+		<div id="waveztextcontainer">
+			<img id="waveztext" src="assets/images/waveztext.png">
+		</div>
+		<div id="boatcontainer">
+			<img id="boat" src="assets/images/wavezboat.png">
+			<div id="anchorcontainer">
+				<img id="anchor" src="assets/images/wavezanchor.png">
+			</div>
+		</div>
+		<div id="seacontainer">
+			<img id="sea" src="assets/images/wavezsea.png">
+		</div>
+	</div>
+
+	
 				</section>
 			</div><!-- header -->
 
@@ -1629,6 +1779,9 @@
 		<script src="assets/js/script.js"></script>
 		<script src="assets/js/waterfall.js"></script>
 		<script src="assets/js/smoothscroll.js"></script>
+		<script src="assets/js/CSSPlugin.min.js"></script>
+  		<script src="assets/js/EasePack.min.js"></script>
+  		<script src="assets/js/TweenLite.min.js"></script>
 		<script type="text/javascript">
 		jQuery(document).ready(function($){
 
@@ -1651,7 +1804,113 @@
 		    
 		 		};   	
 			});
+/*....................home animations starts............................*/
 
+
+var windowheight = $(window).height();
+  	var windowwidth = $(window).width();
+
+  	document.getElementById('homeframe').style.height = windowheight + "px";
+  	document.getElementById('seacontainer').style.height = 0.15*windowheight + "px";
+  	document.getElementById('boatcontainer').style.height = 0.3*windowheight + "px";
+  	document.getElementById('boatcontainer').style.width = 0.4*windowheight + "px";
+  	document.getElementById('boat').style.height = 0.3*windowheight + "px";
+  	document.getElementById('boat').style.width = 0.4*windowheight + "px";
+  	document.getElementById('anchorcontainer').style.height = 0.04*windowheight + "px";
+  	document.getElementById('anchorcontainer').style.width = 0.025*windowheight + "px";
+  	document.getElementById('anchor').style.height = 0.04*windowheight + "px";
+  	document.getElementById('anchor').style.width = 0.025*windowheight + "px";
+  	document.getElementById('departmentlogo').style.left = (0.95*windowwidth) + "px";
+  	document.getElementById('iitmlogo').style.left = (0.95*windowwidth) + "px";
+  	document.getElementById('facebooklogo').style.left = (0.95*windowwidth) + "px";
+  	document.getElementById('waveztextcontainer').style.width = 0.5*windowheight + "px";
+  	document.getElementById('waveztextcontainer').style.height = 0.125*windowheight + "px";
+
+  	TweenLite.to(boatcontainer, 5.7, {left:(0.5*windowwidth), ease:Power1.easeOut});
+  	TweenLite.to(sea, 5.7, {left:(-1*windowwidth), ease:Power1.easeOut});
+
+
+
+
+
+  	TweenLite.to(boatcontainer, 1, {rotation:-5, transformOrigin:"50% 100%"});
+  	TweenLite.to(anchorcontainer, 1, {rotation:10, transformOrigin:"50% 03%"});
+
+  	TweenLite.to(boatcontainer, 1, {rotation:0, transformOrigin:"50% 100%", delay:1});
+  	TweenLite.to(anchorcontainer, 1, {rotation:0, transformOrigin:"50% 03%", delay:1});
+
+  	TweenLite.to(anchorcontainer, 0.7, {rotationY:180, delay:2});
+  	TweenLite.to(boatcontainer, 0.7, {transformOrigin:"50% 100%",
+  									  delay:2,
+  									  ease:Power0.easeInOut});
+
+  	TweenLite.to(boatcontainer, 1, {rotation:5, transformOrigin:"50% 100%", delay:2.7});
+  	TweenLite.to(anchorcontainer, 1, {rotation:-10, transformOrigin:"50% 03%", delay:2.7});
+
+  	TweenLite.to(boatcontainer, 1, {rotation:0, transformOrigin:"50% 100%", delay:3.7});
+  	TweenLite.to(anchorcontainer, 1, {rotation:0, transformOrigin:"50% 03%", delay:3.7});
+
+  	
+  	TweenLite.to(anchorcontainer, 0.7, {rotationY:0, delay:4.7});
+
+
+  	$("#boatcontainer").mouseenter(function(){
+  		TweenLite.to(anchorcontainer, 0.7, {rotationY:360});
+  		TweenLite.to(anchorcontainer, 0.7, {rotationY:0, delay:0.7});
+  		TweenLite.to(anchorcontainer, 0.7, {rotation:10, transformOrigin:"50% 03%"});
+  		TweenLite.to(anchorcontainer, 0.7, {rotation:-10, transformOrigin:"50% 03%", delay:0.7});
+  		TweenLite.set(anchorcontainer, {rotation:0, delay:1.4});
+  	});
+
+  	$("#waveztextcontainer").mouseenter(function(){
+  		TweenLite.fromTo(waveztextcontainer, 1, {autoAlpha:0, scale:0.7}, {autoAlpha:1, scale:1});
+  	});
+
+
+  	TweenLite.to(departmentlogo, 1.9, {
+ 									   top:(windowheight-0.04*windowwidth),
+  									   scale:0.5,
+  									   ease:Bounce.easeOut});
+  	TweenLite.to(boatcontainer, 1.9, {scale:1.1, ease:Bounce.easeOut});
+  	TweenLite.to(departmentlogo, 3.8, {rotation:-1080,
+ 									   left:(0.8*windowwidth), delay:1.9});
+
+
+
+
+
+
+
+ 	TweenLite.to(iitmlogo, 1.9, {
+ 							     top:(windowheight-0.04*windowwidth),
+  							     scale:0.5,
+  								 ease:Bounce.easeOut,
+  								 delay:1.9});
+  	TweenLite.to(boatcontainer, 1.9, {scale:1.2,
+  									  ease:Bounce.easeOut,
+  								   	  delay:1.9});
+  	TweenLite.to(iitmlogo, 1.9, {rotation:-720,
+ 									   left:(0.85*windowwidth), delay:3.8});
+
+
+
+
+
+
+
+ 	TweenLite.to(facebooklogo, 1.9, {
+ 									 top:(windowheight-0.04*windowwidth),
+  									 scale:0.5,
+  									 ease:Bounce.easeOut,
+  									 delay:3.8});
+  	TweenLite.to(boatcontainer, 1.9, {scale:1.3, ease:Bounce.easeOut,
+  									 delay:3.8});
+  	TweenLite.to(facebooklogo, 1, {rotation:-360,
+ 									   left:(0.9*windowwidth), delay:5.7});
+
+
+  	TweenLite.from(waveztextcontainer,  1, {scale:0.01, autoAlpha:0, delay:5.7});
+/*....................home animations ends............................*/
 /* ...................events triggers starts........................... */
 
 			$(".e").click(function(){
