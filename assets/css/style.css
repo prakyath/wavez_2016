@@ -435,6 +435,8 @@ h1.logo {
 
 .about-us {
   background: white;
+  /*background-image: url("department2.jpg");*/
+  /*background-size: cover;*/
   padding: 92px 0 80px;
 }
 
@@ -477,6 +479,7 @@ p.aboutus-desc {
   line-height: 29px;
   letter-spacing: 0.4px;
   color: rgb(106, 106, 106);
+  /*color: black;*/
 }
 
 
@@ -571,18 +574,26 @@ ol.carousel-indicators {
 
 #footer{ background: #2B3E51; color: white; border-top: 1px solid rgba(255, 255, 255, 0.24);}
 
-h2.footer-block {
+h2.footer-block-left {
+    color: white;
+    font-family: "Raleway" , sans-serif;
+    margin-top: 70px;
+}
+h2.footer-block-right {
+    color: white;
+    font-family: "Raleway" , sans-serif;
+    margin-top: 70px;
+}
+h1.footer-block-top {
     color: white;
     font-family: "Raleway" , sans-serif;
     margin-top: 60px;
 }
-h1.footer-block {
+/*h2.footer-block-top {
     color: white;
     font-family: "Raleway" , sans-serif;
-    
-    margin-left: 40%;
     margin-top: 60px;
-}
+}*/
 .form-control{
   border-radius: none !important;
   padding: 20px 26px;
