@@ -98,6 +98,7 @@ h1, h2, h3, h4, h5, h6{
     border: 1px solid white;
     color: white;
     background: transparent;
+    font-weight: 600;
     
 }
 .btn.btn-o-white:hover {
@@ -350,7 +351,7 @@ h1.logo {
 
 .recent-work {
     width: 100%;
-    padding-bottom: 27%;
+    padding-bottom: 40%;
     background: #C3C9CC;
     display: table;
     text-align: center;
@@ -360,24 +361,24 @@ h1.logo {
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 6px;
 }
 
 .recent-work span{
   margin-top: -18px;
-  opacity: 0;
+  opacity: 1;
   position: relative;
   z-index: 1;
 }
 .recent-work:before {
-    background: rgba(2, 56, 58, 0.7);
+    background: rgba(1, 28, 29, 0.35);
     height: 100%;
     width: 100%;
     position: absolute;
     left: 0;
     top: 0;
     content: '';
-    opacity: 0;
+    opacity: 1;  
     -o-transition: all .2s;
   -ms-transition: all .2s;
   -moz-transition: all .2s;
@@ -390,14 +391,18 @@ h1.logo {
 }
 .recent-work:hover:before, .recent-work:hover span {
     opacity: 1;
+    
 }
+/*.recent-work span hover{
+  font-size: 18px;
+}*/
 
 
 
 
 
 /*////////////////////////////////////////////////////////////////////////
-//  06 - Services
+//  06 - Hospitality
 ///////////////////////////////////////////////////////////////////////*/
 
 
