@@ -371,7 +371,7 @@ h1.logo {
   z-index: 1;
 }
 .recent-work:before {
-    background: rgba(1, 28, 29, 0.);
+    background: rgba(1, 28, 29, 0.35);
     height: 100%;
     width: 100%;
     position: absolute;

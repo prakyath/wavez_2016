@@ -185,7 +185,7 @@
      </head>
 	
 	<body>
-		<header class="top-header" style="background: rgba(43, 62, 81, 0.77) none repeat scroll 0% 0%;">
+		<header class="top-header" style="background: rgba(43, 62, 81, 0.77) none repeat scroll 0% 0%; visibilty:visible">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3 col-xs-5 col-sm-3 header-logo">
@@ -228,7 +228,7 @@
 											<a href="#services"><i class="fa fa-hospital-o"></i>Hospitality</a>
 										</li>
 										<li>
-											<a href="#testimonials"><i class="fa fa-money"></i>Pre-sponsers</a>
+											<a href="#testimonials"><i class="fa fa-money"></i>Sponsors</a>
 										</li>
 										<li>
 											<a href="#footer"><i class="fa fa-phone"></i>Contact</a>
@@ -1389,7 +1389,7 @@
 					</div>
 					<section class="block-body">
 						<div class="row">
-							<div class="col-md-4">
+							<div class="col-md-4" style="padding-right: 20px">
 								<div class="service">
 									<div class="bar">
 										<i class="fa fa-train"></i>
@@ -1632,11 +1632,11 @@
 
 				if ($(window).scrollTop() > 100 ){
 		    
-		 		$('.top-header').addClass('shows');
+		 		$('.top-header').addClass('shows'); 
 		    
 		  		} else {
 		    
-		   	 	$('.top-header').removeClass('shows');
+		   	 	$('.top-header').addClass('shows');
 		    
 		 		};   	
 			});
@@ -1746,6 +1746,7 @@ var windowheight = $(window).height();
 
 
   	TweenLite.from(waveztextcontainer,  1, {scale:0.01, autoAlpha:0, delay:5.7});
+  	TweenLite.from(top-header,  1, {scale:0.01, autoAlpha:0, delay:5.7});
 /*....................home animations ends............................*/
 /* ...................events triggers starts........................... */
 
@@ -1982,6 +1983,7 @@ var windowheight = $(window).height();
          // $('.sub-header').addClass('wow bounceInUp');
          $('.aboutus-desc').addClass('wow bounceInRight');
          $('.about-img').addClass('wow bounceInLeft');
+         $('.top-header').addClass('wow slideInDown');
          
          
         </script>
@@ -1997,6 +1999,7 @@ var windowheight = $(window).height();
           // $('.sub-header').attr({'data-wow-duration':'2.5s', 'data-wow-delay':'0.2s'});
           $('.aboutus-desc').attr({'data-wow-duration':'2.5s', 'data-wow-delay':'0.3s'});
           $('.about-img').attr({'data-wow-duration':'3s', 'data-wow-delay':'0.3s'});
+          $('.top-header').attr({ 'data-wow-delay':'5.7s'});
           
         </script>
 
