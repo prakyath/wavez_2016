@@ -23,12 +23,12 @@
 		<!-- css -->
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-		<!-- <link rel="stylesheet" href="assets/css/animate.css"> -->
+		<link rel="stylesheet" href="assets/css/animate.css">
 		<link rel="stylesheet" href="assets/css/style.css" media="screen"/>
 
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3-alpha1/jquery.min.js"></script>
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3-alpha1/jquery.min.js"></script> -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.0/animate.min.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.0/animate.min.css"> -->
 
 		<style type="text/css">
 
@@ -167,7 +167,7 @@
 	}
 		</style>
 	
-   <script>
+    <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -1536,11 +1536,11 @@
 								
 								<h1 class="footer-block-top  " >Secretary</h1>
 								<ul>
-								    <h4 style="color:#FFFFFF" class="animated bounce">Srinadh Nidadana</h4>
+								    <h4 style="color:#FFFFFF" >Srinadh Nidadana</h4>
 								    <img  src="assets/images/img1.jpg" style="margin-bottom:5px; border-radius:50%" width="150" height="150" >
-									    <li class="address-sub animated bounceInLeft">
+									    <li class="address-sub ">
 									        <i class="fa fa-phone" style="margin-bottom:2px"></i> +918438980903</li>
-									    <li class=" animated bounceInLeft">   
+									    <li>   
 									        <i class="fa fa-envelope-o"></i> <a href="">srinadh.673@gmail.com</a></li>
 									    
 							</div>
@@ -1553,13 +1553,13 @@
 
                             <div class="col-sm-3 col-sm-offset-2  blog-post" style="text-align:center">
 								
-								<h1 class="footer-block-top animated bounceInDown">Secretary</h1>
+								<h1 class="footer-block-top">Secretary</h1>
 								<ul>
-								    <h4 style="color:#FFFFFF" class="animated bounce">Karanam Gowtham</h4>
+								    <h4 style="color:#FFFFFF" >Karanam Gowtham</h4>
 								    <img  src="assets/images/img1.jpg" style="margin-bottom:5px; border-radius:50%" width="150" height="150">
-									    <li class="address-sub animated bounceInRight">
+									    <li class="address-sub">
 									        <i class="fa fa-phone" style="margin-bottom:2px"></i> +91977719273</li>
-									    <li class=" animated bounceInRight">   
+									    <li >   
 									        <i class="fa fa-envelope-o"></i> <a href="">karanam.gowtham9@gmail.com</a></li>
                             </div>
 
@@ -1618,7 +1618,6 @@
 		<script src="assets/js/jquery.scrollTo.min.js"></script>
 		<script src="assets/js/contact.js"></script>
 		<script src="assets/js/script.js"></script>
-		<script src="assets/js/waterfall.js"></script>
 		<script src="assets/js/smoothscroll.js"></script>
 		<script src="assets/js/CSSPlugin.min.js"></script>
   		<script src="assets/js/EasePack.min.js"></script>
@@ -1628,15 +1627,14 @@
 
 		  	$(window).scroll(function() {
 		  		
-		  		console.log("asdf");
-
+		  		
 				if ($(window).scrollTop() > 100 ){
 		    
 		 		$('.top-header').addClass('shows'); 
 		    
 		  		} else {
 		    
-		   	 	$('.top-header').addClass('shows');
+		   	 	$('.top-header').removeClass('shows');
 		    
 		 		};   	
 			});
@@ -1746,7 +1744,7 @@ var windowheight = $(window).height();
 
 
   	TweenLite.from(waveztextcontainer,  1, {scale:0.01, autoAlpha:0, delay:5.7});
-  	TweenLite.from(top-header,  1, {scale:0.01, autoAlpha:0, delay:5.7});
+  	
 /*....................home animations ends............................*/
 /* ...................events triggers starts........................... */
 
@@ -1997,9 +1995,9 @@ var windowheight = $(window).height();
           $('.right').attr({'data-wow-duration':'2s', 'data-wow-delay':'0.2s'});
           // $('.main-header').attr({'data-wow-duration':'2.5s', 'data-wow-delay':'0.5s'});
           // $('.sub-header').attr({'data-wow-duration':'2.5s', 'data-wow-delay':'0.2s'});
-          $('.aboutus-desc').attr({'data-wow-duration':'2.5s', 'data-wow-delay':'0.3s'});
-          $('.about-img').attr({'data-wow-duration':'3s', 'data-wow-delay':'0.3s'});
-          $('.top-header').attr({ 'data-wow-delay':'5.7s'});
+          $('.aboutus-desc').attr({'data-wow-duration':'1s', 'data-wow-delay':'0.1s'});
+          $('.about-img').attr({'data-wow-duration':'1s', 'data-wow-delay':'0.1s'});
+          $('.top-header').attr({ 'data-wow-delay':'5.7s', 'data-wow-duration':'1s'});
           
         </script>
 
