@@ -1697,7 +1697,7 @@
 /*....................home animations starts............................*/
 
 
-var windowheight = $(window).height();
+    var windowheight = $(window).height();
   	var windowwidth = $(window).width();
 
   	document.getElementById('homeframe').style.height = windowheight + "px";
@@ -1715,6 +1715,8 @@ var windowheight = $(window).height();
   	document.getElementById('facebooklogo').style.left = (0.95*windowwidth) + "px";
   	document.getElementById('waveztextcontainer').style.width = 0.5*windowheight + "px";
   	document.getElementById('waveztextcontainer').style.height = 0.125*windowheight + "px";
+
+  	 $( window ).load(function() {  
 
   	TweenLite.to(boatcontainer, 5.7, {left:(0.5*windowwidth), ease:Power1.easeOut});
   	TweenLite.to(sea, 5.7, {left:(-1*windowwidth), ease:Power1.easeOut});
@@ -1801,8 +1803,21 @@ var windowheight = $(window).height();
 
   	TweenLite.from(waveztextcontainer,  1, {scale:0.01, autoAlpha:0, delay:5.7});
   	
+
+
+
+})
+
 /*....................home animations ends............................*/
 /* ...................events triggers starts........................... */
+
+		
+
+
+
+
+
+
 
 			$(".e").click(function(){
 				$(this).closest("div").next().modal();
