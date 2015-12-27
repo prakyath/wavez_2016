@@ -1654,20 +1654,7 @@
 
         <script type="text/javascript"> 
        
-        $( window ).load(function() { 
-
-        preloader.off();
-        jQuery("#preloader").fadeOut("slow");
-
-
-
-       })
-		
-
-jQuery(document).ready(function($){
-
-		  	  
-       preloader = new $.materialPreloader({
+        preloader = new $.materialPreloader({
         position: 'top',
         height: '5px',
         col_1: '#159756',
@@ -1679,8 +1666,21 @@ jQuery(document).ready(function($){
         });
               
         preloader.on();
+         
+        $( window ).load(function() { 
+
+        preloader.off();
+        jQuery("#preloader").fadeOut("slow");
 
 
+
+       })
+		
+
+            jQuery(document).ready(function($){
+
+		  	  
+  
                $(window).scroll(function() {
 		  		
 		  		
