@@ -25,13 +25,25 @@
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
 		<link rel="stylesheet" href="assets/css/animate.css">
 		<link rel="stylesheet" href="assets/css/style.css" media="screen"/>
-
+        <link rel="stylesheet" type="text/css" href="assets/css/materialPreloader.css">
+       
         <!-- // <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3-alpha1/jquery.min.js"></script> -->
         <!-- // <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script> -->
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.0/animate.min.css"> -->
 
-		<style type="text/css">
-
+<style type="text/css">
+ 
+      #preloader  {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: white;
+      z-index: 1000;
+      height: 100%;
+     }
+       
 
 		#homeframe
 	{
@@ -171,7 +183,7 @@
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-71672453-1', 'auto');
   ga('send', 'pageview');
@@ -179,12 +191,22 @@
    </script>
 
 
+  
+
+
+
+
+
 
 
 
      </head>
-	
+
 	<body>
+       	<div id="preloader">
+          <div id="status">&nbsp;</div>
+        </div> 
+
 		<header class="top-header" style="background: rgba(43, 62, 81, 0.77) none repeat scroll 0% 0%; visibilty:visible">
 			<div class="container">
 				<div class="row">
@@ -241,6 +263,8 @@
 				</div>
 			</div>
 		</header>
+
+		
 
 		<div id="wrapper">
 			
@@ -1613,6 +1637,7 @@
 
 
 		<script src="assets/js/jquery-2.1.3.min.js"></script>
+		<script type="text/javascript" src="assets/js/materialPreloader.js"></script>
 		<script src="assets/js/bootstrap.js"></script>
 		<script src="assets/js/jquery.actual.min.js"></script>
 		<script src="assets/js/jquery.scrollTo.min.js"></script>
@@ -1623,10 +1648,40 @@
   		<script src="assets/js/EasePack.min.js"></script>
   		<script src="assets/js/wow.js"></script>
 		<script src="assets/js/TweenLite.min.js"></script>
-		<script type="text/javascript">
-		jQuery(document).ready(function($){
+		
 
-		  	$(window).scroll(function() {
+        
+
+        <script type="text/javascript"> 
+       
+        $( window ).load(function() { 
+
+        preloader.off();
+        jQuery("#preloader").fadeOut("slow");
+
+
+
+       })
+		
+
+jQuery(document).ready(function($){
+
+		  	  
+       preloader = new $.materialPreloader({
+        position: 'top',
+        height: '5px',
+        col_1: '#159756',
+        col_2: '#da4733',
+        col_3: '#3b78e7',
+        col_4: '#fdba2c',
+        fadeIn: 200,
+        fadeOut: 200
+        });
+              
+        preloader.on();
+
+
+               $(window).scroll(function() {
 		  		
 		  		
 				if ($(window).scrollTop() > 100 ){

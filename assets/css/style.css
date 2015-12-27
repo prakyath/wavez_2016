@@ -148,7 +148,7 @@ li{
 
 header.top-header {
   position: fixed;
-  z-index: 999;
+  z-index: 101;
   width: 100%;
 }
 .shows {
