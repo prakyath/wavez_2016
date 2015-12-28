@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6{
 
 .btn{border-radius: 0;}
 .btn-o {
-    border: 1px solid #3A4F52;
+    border: 2px solid;
     color: #3A4F52;
 }
 .btn-o:hover {
@@ -95,15 +95,22 @@ h1, h2, h3, h4, h5, h6{
     color: white;
 }
 .btn.btn-o-white {
-    border: 1px solid white;
+    border: 2px solid rgba(2, 56, 58, 0.85);
     color: white;
-    background: transparent;
-    font-weight: 600;
+    background: rgba(2, 56, 58, 0.8);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.45px;
     
 }
 .btn.btn-o-white:hover {
-    background: white !important;
-    color: #6a6a6a; 
+    background: #F1F0F0 !important;
+    color: #6a6a6a;
+    border-right: 2px solid  rgba(2, 56, 58, 0.8);
+    border-bottom: 2px solid  rgba(2, 56, 58, 0.8);
+    /*border-left: 0px solid  #F1F0F0;*/
+    /*border-top:  0px solid #F1F0F0;*/
+    /*color: rgba(2, 56, 58, 0.8); */
 }
 
 .title-page {
@@ -140,7 +147,7 @@ li{
   list-style: none;
 }
 
-/*////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
 //  02 - Header
 ///////////////////////////////////////////////////////////////////////*/
  
@@ -351,12 +358,12 @@ h1.logo {
 
 .recent-work {
     width: 100%;
-    padding-bottom: 40%;
+    /*padding-bottom: 40%;*/
     background: #C3C9CC;
     display: table;
-    text-align: center;
+    text-align: right;
     vertical-align: middle;
-    padding-top: 27%;
+    padding-top: 67%;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -371,7 +378,7 @@ h1.logo {
   z-index: 1;
 }
 .recent-work:before {
-    background: rgba(1, 28, 29, 0.5);
+    background: rgba(1, 28, 29, 0.45);
     height: 100%;
     width: 100%;
     position: absolute;
