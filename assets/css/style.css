@@ -654,6 +654,9 @@ h1.footer-block-top {
 .blog-post ul {
   margin-left: -40px;
 }
+.blog-post ul img{
+  border:2px solid;
+}
 .blog-post .fa{
   background: rgb(219, 82, 82);
   width: 28px;
