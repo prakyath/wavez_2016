@@ -922,7 +922,6 @@ button.navbar-toggle.collapsed {
 .scheduletabd 
 {
   height: 400px;
-  overflow: scroll;
   text-align: left;
 }
 
@@ -931,7 +930,7 @@ button.navbar-toggle.collapsed {
     text-align: left;
 }
 
-.schedtab,.hd1,.hd2
+.schedtabb2,.hd2
 {
   display: none;
 }
@@ -939,6 +938,18 @@ button.navbar-toggle.collapsed {
 .ewiseshed1, .ewiseshed2
 {
   display: none;
+}
+
+.shedresp
+{
+  visibility: hidden;
+}
+@media screen and (max-width: 1000px)
+{
+  .shedresp
+  {
+    visibility: visible;
+  }
 }
 /* end of schedule styles */
 

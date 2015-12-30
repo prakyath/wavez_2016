@@ -131,7 +131,7 @@
     	-webkit-transform: translate(-50%,-50%); /* Safari */
     	transform: translate(-50%,-50%);
   		position: absolute;
-  		top: 0;
+  		top: 50px;
 	}
 
 	#departmentlogo
@@ -1258,7 +1258,7 @@
 					</div>
 					<section class="block-body">
 						<div class="row">
-							<div class="col-md-4 dtgo">
+							<div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 dtgo">
 								<div id="sglass">
 									<p class="dtg adtg">
 										
@@ -1273,8 +1273,8 @@
 
 
 						
-							<div class="dwiseshed">
-							<div class="col-md-8">
+							
+							<div class="col-md-8 col-lg-8 col-xs-12 col-sm-12">
 									<div class="scheduletabd container">
 
 										<h1 class="hd1">Day 1</h1>
@@ -1294,7 +1294,48 @@
       											</tr>
     										</thead>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     										<tbody class="schedtabb1">
+
       											<tr>
         											<td class="schedtabe">Open House</td>
         											<td>9:00 - 10:30</td>
@@ -1326,6 +1367,30 @@
       											</tr>
      									 		
     										</tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     										<tbody class="schedtabb2">
@@ -1373,14 +1438,74 @@
   										</table>
 
 
+
+
+
+
+
+  										<br>
+  										<br>
+  										<h1 class="shedresp">Day 2</h1>
+  										<table class="table table-hover table-condensed shedresp">
+    										<thead>
+     	 										<tr>
+        											<th class="schedtabe">Event</th>
+        											<th>Time</th>
+      											</tr>
+    										</thead>
+
+    										<tbody>
+      											<tr>
+        											<td class="schedtabe">Research Expo</td>
+        											<td>9:00 - 11:00</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">IDP</td>
+        											<td>11:30 - 12:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Project X</td>
+        											<td>11:00 - 12:00</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Wavez Quiz Finals</td>
+        											<td>12:00 - 12:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Roboceana</td>
+        											<td>1:00 - 3:00</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Free Style Solo</td>
+        											<td>3:00 - 4:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Gamedrome</td>
+        											<td>2:30 - 5:30</td>
+      											</tr>
+
+      											<tr>
+        											<td class="schedtabe">Treasure Hunt</td>
+        											<td>4:30 - 6:00</td>
+      											</tr>
+     									 		
+    										</tbody>
+  										</table>
+
 									</div>
 							</div>
 
-							<div class="col-md-8">
+							<div class="col-md-8" id="schedbutton">
 									<div class="scheduletab container">
 								
 										<div id="d1" class="col-md-4">
-											<a class="btn btn-o btn-lg">Day 1
+											<a class="btn btn-o btn-lg disabled">Day 1
 											</a>
 										</div>
 										<div id="d2" class="col-md-4">
@@ -1391,7 +1516,7 @@
 									</div>
 							</div>
 
-						</div>
+						
 						</div>
 					</section>
 				</div>
@@ -1679,6 +1804,7 @@
 
             jQuery(document).ready(function($){
 
+
 		  	  
   
                $(window).scroll(function() {
@@ -1697,10 +1823,12 @@
 /*....................home animations starts............................*/
 
 
-    var windowheight = $(window).height();
+    var windowheightr = $(window).height();
   	var windowwidth = $(window).width();
-
+  	var windowheight = windowheightr-103;
+  	
   	document.getElementById('homeframe').style.height = windowheight + "px";
+  	document.getElementById('header').style.height = windowheight + "px";
   	document.getElementById('seacontainer').style.height = 0.15*windowheight + "px";
   	document.getElementById('boatcontainer').style.height = 0.3*windowheight + "px";
   	document.getElementById('boatcontainer').style.width = 0.4*windowheight + "px";
@@ -1715,6 +1843,13 @@
   	document.getElementById('facebooklogo').style.left = (0.95*windowwidth) + "px";
   	document.getElementById('waveztextcontainer').style.width = 0.5*windowheight + "px";
   	document.getElementById('waveztextcontainer').style.height = 0.125*windowheight + "px";
+
+  	if (windowwidth<=1000) {
+  		document.getElementById('schedule').style.height = 3*windowheight + "px";
+  		document.getElementById('schedbutton').style.display = "none";
+  	}
+
+  	
 
   	 $( window ).load(function() {  
 
@@ -1746,6 +1881,8 @@
   	TweenLite.to(anchorcontainer, 0.7, {rotationY:0, delay:4.7});
 
 
+
+
   	$("#boatcontainer").mouseenter(function(){
   		TweenLite.to(anchorcontainer, 0.7, {rotationY:360});
   		TweenLite.to(anchorcontainer, 0.7, {rotationY:0, delay:0.7});
@@ -1760,12 +1897,12 @@
 
 
   	TweenLite.to(departmentlogo, 1.9, {
- 									   top:(windowheight-0.04*windowwidth),
+ 									   top:(windowheight-40),
   									   scale:0.5,
   									   ease:Bounce.easeOut});
   	TweenLite.to(boatcontainer, 1.9, {scale:1.1, ease:Bounce.easeOut});
   	TweenLite.to(departmentlogo, 3.8, {rotation:-1080,
- 									   left:(0.8*windowwidth), delay:1.9});
+ 									   left:(0.9*windowwidth-104), delay:1.9});
 
 
 
@@ -1774,7 +1911,7 @@
 
 
  	TweenLite.to(iitmlogo, 1.9, {
- 							     top:(windowheight-0.04*windowwidth),
+ 							     top:(windowheight-40),
   							     scale:0.5,
   								 ease:Bounce.easeOut,
   								 delay:1.9});
@@ -1782,7 +1919,7 @@
   									  ease:Bounce.easeOut,
   								   	  delay:1.9});
   	TweenLite.to(iitmlogo, 1.9, {rotation:-720,
- 									   left:(0.85*windowwidth), delay:3.8});
+ 									   left:(0.9*windowwidth-52), delay:3.8});
 
 
 
@@ -1791,7 +1928,7 @@
 
 
  	TweenLite.to(facebooklogo, 1.9, {
- 									 top:(windowheight-0.04*windowwidth),
+ 									 top:(windowheight-40),
   									 scale:0.5,
   									 ease:Bounce.easeOut,
   									 delay:3.8});
@@ -1806,7 +1943,9 @@
 
 
 
-})
+});
+
+
 
 /*....................home animations ends............................*/
 /* ...................events triggers starts........................... */
@@ -1880,17 +2019,6 @@
 /* ...................schedule triggers starts........................... */
 
 			
-			$(window).resize(function(){
-				if(($(window).height)<1000)
-				{
-					
-				}
-			});
-
-			if(($(window).height)<1000)
-				{
-					
-				}
 
 
 
@@ -1917,11 +2045,51 @@
 			}
 
 			f = ((n*2.5)+100) + "px";
+
+
+			var windowheightr1 = $(window).height();
+  			var windowwidth1 = $(window).width();
+  			var windowheight1 = windowheightr-103;
+
+			if(windowwidth1<1000)
+			{
+				$("#swater:not(.animated)").animate({
+						height: f
+					});
+				if(n>0)
+				{
+
+					$(".dtg").text( n + " days to go...");
+				}
+				else
+				{
+
+					$(".dtg").text( "Sorry you are late");
+				}
+
+
+				$(".scheduletabd").prepend("<br><br>");
+				
+
+			}
+
+
+
+			else
+			{
+
+
+
+
+
+
+
 			
 			$("#schedule").hover(function(){
 
-					
+					if(1)
 
+					{
 
 
 
@@ -1985,9 +2153,11 @@
 					$("#swater").addClass("animated");
 
 
-
+				}
 
 				});
+
+		}
 			$("#d1").click(function(){
 
 				$(".schedtab").hide("slow");
