@@ -1823,9 +1823,8 @@
 /*....................home animations starts............................*/
 
 
-    var windowheightr = $(window).height();
+    var windowheight = $(window).height();
   	var windowwidth = $(window).width();
-  	var windowheight = windowheightr-103;
   	
   	document.getElementById('homeframe').style.height = windowheight + "px";
   	document.getElementById('header').style.height = windowheight + "px";
@@ -1845,7 +1844,7 @@
   	document.getElementById('waveztextcontainer').style.height = 0.125*windowheight + "px";
 
   	if (windowwidth<=1000) {
-  		document.getElementById('schedule').style.height = 3*windowheight + "px";
+  		document.getElementById('schedule').style.height = 2.5*windowheight + "px";
   		document.getElementById('schedbutton').style.display = "none";
   	}
 
@@ -2047,9 +2046,7 @@
 			f = ((n*2.5)+100) + "px";
 
 
-			var windowheightr1 = $(window).height();
   			var windowwidth1 = $(window).width();
-  			var windowheight1 = windowheightr-103;
 
 			if(windowwidth1<1000)
 			{
