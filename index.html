@@ -2090,7 +2090,7 @@
   	document.getElementById('waveztextcontainer').style.height = 0.125*windowheight + "px";
 
   	if (windowwidth<=1000) {
-  		document.getElementById('schedule').style.height = 2.5*windowheight + "px";
+  		document.getElementById('schedule').style.height = "1500px";
   		document.getElementById('schedbutton').style.display = "none";
   	}
 
@@ -2187,6 +2187,122 @@
   	
 
 
+
+});
+
+$(window).resize(function(){
+	var windowheight = $(window).height();
+  	var windowwidth = $(window).width();
+  	
+  	document.getElementById('homeframe').style.height = windowheight + "px";
+  	document.getElementById('header').style.height = windowheight + "px";
+  	document.getElementById('seacontainer').style.height = 0.15*windowheight + "px";
+  	document.getElementById('boatcontainer').style.height = 0.3*windowheight + "px";
+  	document.getElementById('boatcontainer').style.width = 0.4*windowheight + "px";
+  	document.getElementById('boat').style.height = 0.3*windowheight + "px";
+  	document.getElementById('boat').style.width = 0.4*windowheight + "px";
+  	document.getElementById('anchorcontainer').style.height = 0.04*windowheight + "px";
+  	document.getElementById('anchorcontainer').style.width = 0.025*windowheight + "px";
+  	document.getElementById('anchor').style.height = 0.04*windowheight + "px";
+  	document.getElementById('anchor').style.width = 0.025*windowheight + "px";
+  	document.getElementById('departmentlogo').style.left = (0.95*windowwidth) + "px";
+  	document.getElementById('iitmlogo').style.left = (0.95*windowwidth) + "px";
+  	document.getElementById('facebooklogo').style.left = (0.95*windowwidth) + "px";
+  	document.getElementById('waveztextcontainer').style.width = 0.5*windowheight + "px";
+  	document.getElementById('waveztextcontainer').style.height = 0.125*windowheight + "px";
+
+  	if (windowwidth<=1000) {
+  		document.getElementById('schedule').style.height = "1500px";
+  		document.getElementById('schedbutton').style.display = "none";
+  	}
+
+  	TweenLite.to(boatcontainer, 5.7, {left:(0.5*windowwidth), ease:Power1.easeOut});
+  	TweenLite.to(sea, 5.7, {left:(-1*windowwidth), ease:Power1.easeOut});
+
+
+
+
+
+  	TweenLite.to(boatcontainer, 1, {rotation:-5, transformOrigin:"50% 100%"});
+  	TweenLite.to(anchorcontainer, 1, {rotation:10, transformOrigin:"50% 03%"});
+
+  	TweenLite.to(boatcontainer, 1, {rotation:0, transformOrigin:"50% 100%", delay:1});
+  	TweenLite.to(anchorcontainer, 1, {rotation:0, transformOrigin:"50% 03%", delay:1});
+
+  	TweenLite.to(anchorcontainer, 0.7, {rotationY:180, delay:2});
+  	TweenLite.to(boatcontainer, 0.7, {transformOrigin:"50% 100%",
+  									  delay:2,
+  									  ease:Power0.easeInOut});
+
+  	TweenLite.to(boatcontainer, 1, {rotation:5, transformOrigin:"50% 100%", delay:2.7});
+  	TweenLite.to(anchorcontainer, 1, {rotation:-10, transformOrigin:"50% 03%", delay:2.7});
+
+  	TweenLite.to(boatcontainer, 1, {rotation:0, transformOrigin:"50% 100%", delay:3.7});
+  	TweenLite.to(anchorcontainer, 1, {rotation:0, transformOrigin:"50% 03%", delay:3.7});
+
+  	
+  	TweenLite.to(anchorcontainer, 0.7, {rotationY:0, delay:4.7});
+
+
+
+
+  	$("#boatcontainer").mouseenter(function(){
+  		TweenLite.to(anchorcontainer, 0.7, {rotationY:360});
+  		TweenLite.to(anchorcontainer, 0.7, {rotationY:0, delay:0.7});
+  		TweenLite.to(anchorcontainer, 0.7, {rotation:10, transformOrigin:"50% 03%"});
+  		TweenLite.to(anchorcontainer, 0.7, {rotation:-10, transformOrigin:"50% 03%", delay:0.7});
+  		TweenLite.set(anchorcontainer, {rotation:0, delay:1.4});
+  	});
+
+  	$("#waveztextcontainer").mouseenter(function(){
+  		TweenLite.fromTo(waveztextcontainer, 1, {autoAlpha:0, scale:0.7}, {autoAlpha:1, scale:1});
+  	});
+
+
+  	TweenLite.to(departmentlogo, 1.9, {
+ 									   top:(windowheight-40),
+  									   scale:0.5,
+  									   ease:Bounce.easeOut});
+  	TweenLite.to(boatcontainer, 1.9, {scale:1.1, ease:Bounce.easeOut});
+  	TweenLite.to(departmentlogo, 3.8, {rotation:-1080,
+ 									   left:(0.9*windowwidth-104), delay:1.9});
+
+
+
+
+
+
+
+ 	TweenLite.to(iitmlogo, 1.9, {
+ 							     top:(windowheight-40),
+  							     scale:0.5,
+  								 ease:Bounce.easeOut,
+  								 delay:1.9});
+  	TweenLite.to(boatcontainer, 1.9, {scale:1.2,
+  									  ease:Bounce.easeOut,
+  								   	  delay:1.9});
+  	TweenLite.to(iitmlogo, 1.9, {rotation:-720,
+ 									   left:(0.9*windowwidth-52), delay:3.8});
+
+
+
+
+
+
+
+ 	TweenLite.to(facebooklogo, 1.9, {
+ 									 top:(windowheight-40),
+  									 scale:0.5,
+  									 ease:Bounce.easeOut,
+  									 delay:3.8});
+  	TweenLite.to(boatcontainer, 1.9, {scale:1.3, ease:Bounce.easeOut,
+  									 delay:3.8});
+  	TweenLite.to(facebooklogo, 1, {rotation:-360,
+ 									   left:(0.9*windowwidth), delay:5.7});
+
+
+  	TweenLite.from(waveztextcontainer,  1, {scale:0.01, autoAlpha:0, delay:5.7});
+  	
 
 });
 
@@ -2401,6 +2517,120 @@
 				});
 
 		}
+
+
+		$(window).resize(function(){
+			var windowwidth1 = $(window).width();
+
+			if(windowwidth1<1000)
+			{
+				$("#swater:not(.animated)").animate({
+						height: f
+					});
+				if(n>0)
+				{
+
+					$(".dtg").text( n + " days to go...");
+				}
+				else
+				{
+
+					$(".dtg").text( "Sorry you are late");
+				}
+
+
+				$(".scheduletabd").prepend("<br><br>");
+				
+
+			}
+
+
+
+			else
+			{
+
+
+
+
+
+
+
+			
+			$("#schedule").hover(function(){
+
+					if(1)
+
+					{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+					if(flag)
+					{
+					$("#swater:not(.animated)").animate({
+						height: f
+					});
+
+					$({countNum:0}).animate(
+						{countNum:n},
+						{
+							duration:3000,
+							easing:"linear",
+							step: function() {
+								$(".dtg").text(Math.floor(this.countNum) + " days to go...");
+											 },
+							complete: function() {
+								if(n>0)
+								{
+
+								$(".dtg").text( n + " days to go...");
+								}
+								else
+								{
+
+								$(".dtg").text( "Sorry you are late");
+								}
+
+							}
+
+						}
+						);
+
+					$(".scheduletab > div > a").show();
+					$(".scheduletab > div > a").animate({top : "+=350px",
+														 width:"300px",
+														 height:"300px",
+														 borderRadius:"150px",
+														 fontSize:"300%"}, 200);
+
+					flag=0;
+				 	}
+					$("#swater").addClass("animated");
+
+
+				}
+
+				});
+
+		}
+			
+		});
 			$("#d1").click(function(){
 
 				$(".schedtab").hide("slow");
