@@ -841,10 +841,6 @@ button.navbar-toggle.collapsed {
 
 /* schedule styles */
 
-#schedule
-{
-  overflow: scroll;
-}
 
 
 #sglass 
@@ -958,6 +954,10 @@ button.navbar-toggle.collapsed {
   {
     visibility: visible;
   }
+  #schedule
+{
+  overflow: scroll;
+}
 }
 /* end of schedule styles */
 
