@@ -630,7 +630,7 @@ h1.footer-block-top {
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #969595 !important; 
+   color: rgb(0,0,0); !important; 
 }
 
 :-ms-input-placeholder {  
@@ -751,19 +751,19 @@ button.navbar-toggle.collapsed {
 {
   width: 80%;
   background-color: transparent;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 .eventname > .modal-dialog > .modal-content
 {
   background-color: transparent;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 .eventname > .modal-dialog > .modal-content > .modal-body
 {
   background-color: #000000;
-  opacity: .8;
+  /*opacity: .8;*/
   color: #FFFFFF;
   border-radius: 10px;
   border-color: #FFFFFF;
@@ -800,7 +800,7 @@ button.navbar-toggle.collapsed {
   border-style: solid;
   border-color: #FFFFFF;
   border-width: 1px;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .eventname > .modal-dialog > .modal-content > .modal-header > h4 > .livetab,
@@ -1628,4 +1628,47 @@ to{-webkit-transform:rotate(0deg);}
   background:#fff;
 }
 
-/*animation ends
+/*animation ends*/
+
+#enter_email{
+    background-color:#FFFFFF;
+    padding:8px 8px;
+    text-decoration:none;
+    color:rgb(0,0,0);
+    display:inline;
+    font-size: 16px;
+    position:relative;
+    font-family: 'Raleway';
+    
+}
+#choose-buttons{
+  text-align: center;
+  margin:auto;
+  padding-top: inherit;
+  margin-bottom: 60px;
+}
+#login-fa{
+  position: absolute;
+  margin-left: 13vw;
+  margin-top: 60px;
+  font-size: 60px;
+}
+
+.input-group-addon{
+  padding: 6px 12px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  color:black;
+  text-align: center;
+  background-color: white;
+  border:1px solid white;
+  border-radius:4px;
+}
+#login-button{
+  background-color:black; border-color:white;border-radius:4px ;
+}
+#choose-buttons a: hover{
+  background-color: white;
+  color:black;
+}
