@@ -1,0 +1,319 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<link rel="shortcut icon" type="image/png" href="../assets/images/wavezlogo.png">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<style type="text/css">
+			body
+			{
+				background-color: #D3D3D3;
+			}
+			#topnav
+			{
+				height: 75px;
+				position: fixed;
+				top: 0px;
+				background-color: #596876;
+				width: 100%;
+				z-index: 1000;
+				border-style: solid;
+				border-color: #FFFFFF;
+			}
+			.logo
+			{
+				color: #FFFFFF;
+				margin-top: 1%;
+				margin-left: 4%;
+  				display: inline-flex;
+			}
+			.logo-head
+			{
+				font-size: 12px;
+  				font-weight: 300;
+			}
+			.rightbuttons
+			{
+				float: right;
+				margin-top: 11px;
+			}
+			.rightbuttons > a
+			{
+				color: #FFFFFF;
+				font-size: 50%;
+				font-weight: 50%;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+			.rightbuttons > a:hover
+			{
+				color: #B2B2B2;
+			}
+			#leftpane
+			{
+				width: 20%;
+				height: 100%;
+				background-color: #596876;
+				z-index: 0;
+				position: fixed;
+				left: 0;
+				top: 0;
+				border-style: solid;
+				border-color: #FFFFFF;
+			}
+			#rightpane
+			{
+				width: 20%;
+				height: 100%;
+				background-color: #596876;
+				z-index: 0;
+				position: fixed;
+				right: 0;
+				top: 0;
+				border-style: solid;
+				border-color: #FFFFFF;
+			}
+			#mainmenu
+			{
+				height: 50px;
+				width: 60%;
+				position: fixed;
+				left: 20%;
+				top: 75px;
+				background-color: #596876;
+				border-bottom-style: solid;
+				border-bottom-color: #FFFFFF;
+			}
+			#mainmenu > div >a
+			{
+				color: #FFFFFF;
+				font-size: 130%;
+			}
+			#mainmenu > div
+			{
+				width: 50%;
+				height: 50px;
+				display: inline-block;
+				text-align: center;
+				padding-top: 13px;
+			}
+			#datasheet
+			{
+				position: absolute;
+				top: 0;
+				left: 50%;
+				border-left-style: solid;
+				border-color: #FFFFFF;
+			}
+			#mainmenu > .activebutton
+			{
+				background-color: #D3D3D3;
+			}
+			#mainmenu > .activebutton > a
+			{
+				color: #596876;
+				font-size: 140%;
+			}
+			#leftpane > div > a
+			{
+				color: #FFFFFF;
+			}
+			#lp1
+			{
+				position: fixed;
+				top: 80px;
+			}
+			#lp2
+			{
+				position: fixed;
+				top: 105px;
+			}
+			#lp3
+			{
+				position: fixed;
+				top: 130px;
+			}
+			#lp4
+			{
+				position: fixed;
+				top: 155px;
+			}
+			#lp5
+			{
+				position: fixed;
+				top: 180px;
+			}
+			#lp6
+			{
+				position: fixed;
+				top: 205px;
+			}
+			#lp7
+			{
+				position: fixed;
+				top: 230px;
+			}
+			#lp8
+			{
+				position: fixed;
+				top: 255px;
+			}
+			#lp9
+			{
+				position: fixed;
+				top: 280px;
+			}
+			#lp10
+			{
+				position: fixed;
+				top: 305px;
+			}
+			#lp11
+			{
+				position: fixed;
+				top: 330px;
+			}
+			#lp12
+			{
+				position: fixed;
+				top: 355px;
+			}
+			#lp13
+			{
+				position: fixed;
+				top: 380px;
+			}
+			#lp14
+			{
+				position: fixed;
+				top: 405px;
+			}
+			#lp15
+			{
+				position: fixed;
+				top: 430px;
+			}
+			#postbutton
+			{
+				position: relative;
+				top: 75px;
+				height: 50px;
+				width: 100%;
+				border-bottom-style: solid;
+				border-bottom-color: #FFFFFF;
+			}
+			#postbutton > button
+			{
+				color: #FFFFFF;
+				font-size: 200%;
+				position: relative;
+				left: 20%;
+				background-color: transparent;
+				border: none;
+			}
+		</style>
+
+		<title>Wavez 2016: IIT Madras Naval Architecture and Ocean Engineering Department Annual Techno-Cultural Festival</title>
+
+		<!-- meta -->
+			<meta name="description" content="Wavez is the annual techno-cultural festival of the Department of Naval Architecture and Ocean Engineering at IIT Madras. It involves both Technical and Cultural events and is aimed at increasing the intra-department and inter-department interactions.">
+			<meta name="keywords" content="Wavez 2016">
+			<meta name="author" content="Wavez 2016 WebOps Team">
+			<meta charset="UTF-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+	</head>
+
+	<body>
+
+		<div id="topnav" class="container">
+			<h1 class="logo">Wavez 
+				<span class="logo-head">2016
+				</span>
+			</h1>
+			<h1 class="rightbuttons">
+
+				<a href="#"><i class="fa fa-user"></i> Me
+				</a>
+				<a href=""><i class="fa fa-sign-out"></i> LogOut
+				</a>
+			</h1>
+		</div>
+
+		<div id="leftpane" class="container">
+			<div id="lp1">
+				<a href=""><i class="fa fa-user"></i> Srinadh Nidadana (Secretary)</a>
+			</div>
+			<div id="lp2">
+				<a href=""><i class="fa fa-user"></i> Karanam Gowtham (Secretary)</a>
+			</div>
+			<div id="lp3">
+				<a href=""><i class="fa fa-user"></i> Prasanna Venkatesh (Spons)</a>
+			</div>
+			<div id="lp4">
+				<a href=""><i class="fa fa-user"></i> Vishal Venkatesh (Spons)</a>
+			</div>
+			<div id="lp5">
+				<a href=""><i class="fa fa-user"></i> Ravali K (Events)</a>
+			</div>
+			<div id="lp6">
+				<a href=""><i class="fa fa-user"></i> Rithish (Events)</a>
+			</div>
+			<div id="lp7">
+				<a href=""><i class="fa fa-user"></i> Devi Amulya (Treasurer)</a>
+			</div>
+			<div id="lp8">
+				<a href=""><i class="fa fa-user"></i> Prakhyat Shankesi (WebOps)</a>
+			</div>
+			<div id="lp9">
+				<a href=""><i class="fa fa-user"></i> Sandeep (Design & ambi)</a>
+			</div>
+			<div id="lp10">
+				<a href=""><i class="fa fa-user"></i> Sreeshyam C A (Publicity)</a>
+			</div>
+			<div id="lp11">
+				<a href=""><i class="fa fa-user"></i> Sivaramakrishnan (Publicity)</a>
+			</div>
+			<div id="lp12">
+				<a href=""><i class="fa fa-user"></i> Dikshant Telang (Facilities)</a>
+			</div>
+			<div id="lp13">
+				<a href=""><i class="fa fa-user"></i> Navaneeth D (Facilities)</a>
+			</div>
+			<div id="lp14">
+				<a href=""><i class="fa fa-user"></i> Jerick R (QMS)</a>
+			</div>
+			<div id="lp15">
+				<a href=""><i class="fa fa-user"></i> Kishore S A (Sports)</a>
+			</div>
+		</div>
+
+		<div id="rightpane" class="container">
+			<div id="postbutton">
+				<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#NewPost"><i class="fa fa-pencil"></i> Post
+				</button>
+				
+			</div>
+		</div>
+
+		<div id="mainmenu">
+			<div id="timeline" class="activebutton">
+				<a href=""><i class="fa fa-line-chart"></i> TimeLine
+				</a>
+			</div>
+			<div id="datasheet">
+				<a href=""><i class="fa fa-database"></i> DataSheet
+				</a>
+			</div>
+		</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  		<script type="text/javascript">
+  		</script>
+	</body>
+
+</html>
