@@ -1709,3 +1709,17 @@ to{-webkit-transform:rotate(0deg);}
     display: inline-block;
   }
 }
+/*kryptx css begins*/
+.content-format{
+  margin:auto;
+  margin-top: 40px;
+  padding: 40px 40px;
+  width:80vw;
+  border:1px solid #AAAAD3;
+}
+.content-format ul{
+  list-style-type: decimal;
+}
+.content-format ul li{
+  font-size: 18px;
+}
